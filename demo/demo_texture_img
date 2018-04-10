@@ -1,0 +1,33 @@
+--Scene declaration, must be the first thing
+scene ambiant 0.5 0.5 0.5 background 0.4 0.0 0.4 ambiant_base_impact 0.5 ambiant_coef_impact 0.15 max_reflexion 1
+
+--Camera declaration
+camera position 0 0 -10 rotation 0 0 0 screen 100 50 fov 90 antialiasing 3
+
+
+
+
+
+
+
+
+
+
+
+--Lights declaration
+light position 0 0 -10 color 1 1 1 power 100
+
+
+image id dam name DiamondPlate.bmp
+image id wall name grass.bmp
+
+texture id wall1 image dam elarge 1 1 begin 50 0
+texture id wall2 image wall elarge 1.0 1.0 begin 0 0
+
+--Material declarations
+material id leftsphere texture wall1 shininess 100 specular 0.5
+material id rightsphere texture wall2 ambiant 1 diffuse 0.9 specular 0 shininess 100 reflexion 0
+
+--Primitives declarations
+sphere position 0 0 -5 radius 3 rotation 0 0 0 material leftsphere
+plane position 0 0 0 rotation 90 0 0 material rightsphere

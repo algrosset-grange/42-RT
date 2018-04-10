@@ -1,0 +1,19 @@
+--Scene declaration, must be the first thing
+scene ambiant 0.5 0.5 0.5 background 0.4 0.4 0 ambiant_base_impact 0.5 ambiant_coef_impact 0.15 max_reflexion 1
+
+--Camera declaration
+camera position 0 0 -10 rotation 0 0 0 screen 400 300 fov 90 antialiasing 1
+
+--Lights declaration
+light position 0 0 -15 color 1 1 1 power 100
+
+--Material declarations
+material id withwall texture wall1 shininess 100 specular 0.0
+
+--Material declarations
+material id leftsphere color1 0 0 1 color2 0 0 1 perturbation uni shininess 100 specular 1.0
+
+--Primitives declarations
+--cylinder position 0 0 0 height 30 rotation 0 0 0 radius 2 material leftsphere
+sphere position 0 0 0 radius 6 material leftsphere
+--cone position 0 0 0 rotation 0 0 0 angle 40  material leftsphere start_height 1.5 end_height -1

@@ -1,0 +1,24 @@
+--Scene declaration, must be the first thing
+scene ambiant 1 1 1 background 0.4 0.0 0.4 ambiant_base_impact 1 ambiant_coef_impact 0.15 max_reflexion 1
+
+--Camera declaration
+camera position 0 0 -8 rotation 0 0 0 screen 888 405 fov 90 antialiasing 1
+
+-- reflet supose a 187 60 pour x = 1
+--296*x 135*x 888 405
+-- Pour x = 3 : 888 405
+-- reflet a 561 180
+
+--Lights declaration
+light position -3 4 -8 color 1 1 1 power 100
+--light position 0 10 5 color 1 1 1 power 100
+--light position 2 4 -3 color 1 1 1 power 100
+
+--Material declarations
+--material id leftsphere color1 1 0 0 ambiant 1 diffuse 0.9 specular 1 shininess 100 reflexion 0
+--material id ground color1 0 0 1 ambiant 1 diffuse 0.1 specular 1 shininess 100 reflexion 0 refraction 1.0 n 1.0
+
+--Primitives declarations
+sphere position 0 0 0 radius 3 material ~*
+--sphere position ~ 0 0 radius 3 material leftsphere
+--plane position 0 -1 0 rotation 0 0 0 material ground

@@ -1,0 +1,15 @@
+--Scene declaration, must be the first thing
+scene ambiant 1 1 1 background 0.4 0.0 0.4 ambiant_base_impact 1 ambiant_coef_impact 0.15 max_reflexion 1
+
+--Camera declaration
+camera position 0 0 -5 rotation 0 0 0 screen 800 600 fov 90 antialiasing 1
+
+--Lights declaration
+
+light position 0 5 -5 color 1 1 1 power 100
+
+--Material declarations
+material id leftsphere color1 1 0 0 color2 0 0 1 texture rand* ambiant 1 diffuse 0.9 specular 1 shininess 21
+
+--Primitives declarations
+sphere position 0 0 10 radius 5 material leftsphere
